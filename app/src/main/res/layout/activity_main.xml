@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/view_a"
+        android:layout_width="400px"
+        android:layout_height="300px"
+        android:background="#ff8f0a"
+        android:gravity="center"
+        android:text="A"
+        android:textColor="#000000"
+        android:textSize="180px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="200px"
+        android:layout_height="500px"
+        android:layout_marginTop="20px"
+        android:background="#00ccff"
+        android:gravity="center"
+        android:text="B"
+        android:textColor="#000000"
+        android:textSize="180px"
+        app:layout_constraintRight_toRightOf="@+id/view_a"
+        app:layout_constraintTop_toBottomOf="@+id/view_a" />
+
+    <TextView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginTop="20px"
+        android:background="#00ccff"
+        android:gravity="center"
+        android:text="center"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginTop="20px"
+        android:background="#cc00ff"
+        android:gravity="center"
+        android:text="V-center"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginTop="20px"
+        android:background="#cc00ff"
+        android:gravity="center"
+        android:text="R-V-center"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="300px"
+        android:layout_height="300px"
+        android:layout_marginBottom="1200px"
+        android:layout_marginTop="20px"
+        android:background="#cc00ff"
+        android:gravity="center"
+        android:text="B-H-center"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/view_xxx"
+        android:layout_width="400px"
+        android:layout_height="160px"
+        android:layout_marginTop="20px"
+        android:background="#cc00ff"
+        android:gravity="center"
+        android:text="1/3 左侧剧中"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <!-- 设置偏移量 layout_constraintHorizontal_bias -->
+    <TextView
+        android:id="@+id/三分之一右侧剧中"
+        android:layout_width="400px"
+        android:layout_height="160px"
+        android:layout_marginTop="20px"
+        android:background="#cc0011"
+        android:gravity="center"
+        android:text="1/3 右侧剧中"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toTopOf="@+id/view_xxx"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <!-- 设置横向百分比 layout_constraintWidth_percent -->
+    <TextView
+        android:id="@+id/设置横向百分比"
+        android:layout_width="0dp"
+        android:layout_height="160px"
+        android:layout_marginTop="20px"
+        android:background="#00ffcc"
+        android:gravity="center"
+        android:text="宽度百分比50%"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toTopOf="@+id/三分之一右侧剧中"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <!--
+    layout_width="0dp"
+    app:layout_constraintHeight_default="wrap"
+
+    另外一种方法app:layout_constrainedWidth="true" 可以
+    限制最大尺寸 此时就不用写前者的配置了
+    def warp屬性 限制不超过约束尺寸 -->
+    <TextView
+        android:id="@+id/限制不超过约束尺寸"
+        android:layout_width="0dp"
+        android:layout_height="160px"
+        android:layout_marginLeft="200px"
+        android:layout_marginRight="200px"
+        android:background="#0055bb"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="限制不超过约束尺寸限制不超过约束尺寸限制不超过约束尺寸限制不超过约束尺寸限制不超过约束尺寸"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toTopOf="@+id/设置横向百分比"
+        app:layout_constraintHeight_default="wrap"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!--
+    app:layout_constraintHeight_default="wrap"
+    与
+    android:layout_width="wrap_content" 区别
+    后者不会限制
+
+    ef warp屬性 限制不超过约束尺寸 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="160px"
+        android:layout_marginLeft="200px"
+        android:layout_marginRight="200px"
+        android:background="#0055bb"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="限制不超过约束尺寸限制不超过约束尺寸限制不超过约束尺寸限制不超过约束尺寸限制不超过约束尺寸"
+        android:textColor="#000000"
+        android:textSize="60px"
+        app:layout_constraintBottom_toTopOf="@+id/限制不超过约束尺寸"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
